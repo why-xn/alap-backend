@@ -1,0 +1,216 @@
+{
+	"info": {
+		"_postman_id": "f46664e3-c638-466d-85ca-e7ade8f4d9ba",
+		"name": "Alap",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "29719596"
+	},
+	"item": [
+		{
+			"name": "Get Chat Window",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICI1bGF4RjI0SG56RnRWcmEtQWs2WG1YY2JRV1BweEsxMnFWSnhqbmRiYmhNIn0.eyJleHAiOjE3MDA3NjM2OTgsImlhdCI6MTcwMDc2Mjc5OCwiYXV0aF90aW1lIjoxNzAwNzYyNzc3LCJqdGkiOiJkZmNlZTNlMC1hNzhmLTQ1ZDQtOTA1Yi1hYWYyZTdhNmYyZWUiLCJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwODAvcmVhbG1zL2xvZ2ktY2xvdWQiLCJhdWQiOiJhY2NvdW50Iiwic3ViIjoiZjdlZWE2OTUtODhhNy00NmI1LWIwMWQtMTZkMDZlMDhiOTNkIiwidHlwIjoiQmVhcmVyIiwiYXpwIjoic3NvLWFwcCIsInNlc3Npb25fc3RhdGUiOiJjMDIxOWY3MS1lMjNjLTRiZjItYWMwZS1lMTE1MTFlMGVjOWEiLCJhY3IiOiIxIiwiYWxsb3dlZC1vcmlnaW5zIjpbIioiXSwicmVhbG1fYWNjZXNzIjp7InJvbGVzIjpbIm9mZmxpbmVfYWNjZXNzIiwiZGVmYXVsdC1yb2xlcy1sb2dpLWNsb3VkIiwidW1hX2F1dGhvcml6YXRpb24iXX0sInJlc291cmNlX2FjY2VzcyI6eyJhY2NvdW50Ijp7InJvbGVzIjpbIm1hbmFnZS1hY2NvdW50IiwibWFuYWdlLWFjY291bnQtbGlua3MiLCJ2aWV3LXByb2ZpbGUiXX0sInNzby1hcHAiOnsicm9sZXMiOlsicm9sZS11c2VyIiwicm9sZS1hZG1pbiJdfX0sInNjb3BlIjoib3BlbmlkIGVtYWlsIHByb2ZpbGUiLCJzaWQiOiJjMDIxOWY3MS1lMjNjLTRiZjItYWMwZS1lMTE1MTFlMGVjOWEiLCJlbWFpbF92ZXJpZmllZCI6dHJ1ZSwibmFtZSI6IlNoaWhhYiBIQVNBTiIsInByZWZlcnJlZF91c2VybmFtZSI6InNoaWhhYi5oYXNhbkBsb2dpLWNsb3VkLmNvbSIsImdpdmVuX25hbWUiOiJTaGloYWIiLCJmYW1pbHlfbmFtZSI6IkhBU0FOIiwiZW1haWwiOiJzaGloYWIuaGFzYW5AbG9naS1jbG91ZC5jb20ifQ.WTe-FszU2mrIT5yx3L2JfsPL0dMJCae8fDyzDSipwylIo4LFfirhUUPihYiAK0AMD-BgHEKtaSsuBp0m_QjhDQWfX8uTku0DxVkzE2kUvBMInwp4ccZXLzL00U-z0lw0urJqnwWy8Xjdpt2oabe17kn0IHkuBQbkE2AIPV7u1purGd3ZGt-kL8FrrI5aaKB_k7nzeOQZuSV92P1KAx5PTtaISYtTIAB3WRIHig0DLXM4_fChKMTsgs4559kwuDh3bvq-e_HDggFwv7ldBwskSUZo49i9oyekfUfpAqPhvGa9IuhcAnEFRI--TDxxpSBDGdsREIeOR-gMXyZ51DA-bQ",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/api/v1/user/916982fc-a7cb-4834-9f6b-4842829413eb",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"v1",
+						"user",
+						"916982fc-a7cb-4834-9f6b-4842829413eb"
+					],
+					"query": [
+						{
+							"key": "client_id",
+							"value": "sso-app",
+							"disabled": true
+						},
+						{
+							"key": "response_type",
+							"value": "code",
+							"disabled": true
+						},
+						{
+							"key": "scope",
+							"value": "openid profile",
+							"disabled": true
+						},
+						{
+							"key": "redirect_uri",
+							"value": "https://google.com",
+							"disabled": true
+						},
+						{
+							"key": "state",
+							"value": "sdfsadfsdf",
+							"disabled": true
+						},
+						{
+							"key": "code",
+							"value": "10267119-1ff2-4bd8-9a5f-a94c4e6a5666.d74153d0-1bf9-4646-8de9-35353e5aae0e.c1916d9d-a80a-4cb1-8bc9-0802bd296b4c",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get User List",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICI1bGF4RjI0SG56RnRWcmEtQWs2WG1YY2JRV1BweEsxMnFWSnhqbmRiYmhNIn0.eyJleHAiOjE3MDA3NjM2OTgsImlhdCI6MTcwMDc2Mjc5OCwiYXV0aF90aW1lIjoxNzAwNzYyNzc3LCJqdGkiOiJkZmNlZTNlMC1hNzhmLTQ1ZDQtOTA1Yi1hYWYyZTdhNmYyZWUiLCJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwODAvcmVhbG1zL2xvZ2ktY2xvdWQiLCJhdWQiOiJhY2NvdW50Iiwic3ViIjoiZjdlZWE2OTUtODhhNy00NmI1LWIwMWQtMTZkMDZlMDhiOTNkIiwidHlwIjoiQmVhcmVyIiwiYXpwIjoic3NvLWFwcCIsInNlc3Npb25fc3RhdGUiOiJjMDIxOWY3MS1lMjNjLTRiZjItYWMwZS1lMTE1MTFlMGVjOWEiLCJhY3IiOiIxIiwiYWxsb3dlZC1vcmlnaW5zIjpbIioiXSwicmVhbG1fYWNjZXNzIjp7InJvbGVzIjpbIm9mZmxpbmVfYWNjZXNzIiwiZGVmYXVsdC1yb2xlcy1sb2dpLWNsb3VkIiwidW1hX2F1dGhvcml6YXRpb24iXX0sInJlc291cmNlX2FjY2VzcyI6eyJhY2NvdW50Ijp7InJvbGVzIjpbIm1hbmFnZS1hY2NvdW50IiwibWFuYWdlLWFjY291bnQtbGlua3MiLCJ2aWV3LXByb2ZpbGUiXX0sInNzby1hcHAiOnsicm9sZXMiOlsicm9sZS11c2VyIiwicm9sZS1hZG1pbiJdfX0sInNjb3BlIjoib3BlbmlkIGVtYWlsIHByb2ZpbGUiLCJzaWQiOiJjMDIxOWY3MS1lMjNjLTRiZjItYWMwZS1lMTE1MTFlMGVjOWEiLCJlbWFpbF92ZXJpZmllZCI6dHJ1ZSwibmFtZSI6IlNoaWhhYiBIQVNBTiIsInByZWZlcnJlZF91c2VybmFtZSI6InNoaWhhYi5oYXNhbkBsb2dpLWNsb3VkLmNvbSIsImdpdmVuX25hbWUiOiJTaGloYWIiLCJmYW1pbHlfbmFtZSI6IkhBU0FOIiwiZW1haWwiOiJzaGloYWIuaGFzYW5AbG9naS1jbG91ZC5jb20ifQ.WTe-FszU2mrIT5yx3L2JfsPL0dMJCae8fDyzDSipwylIo4LFfirhUUPihYiAK0AMD-BgHEKtaSsuBp0m_QjhDQWfX8uTku0DxVkzE2kUvBMInwp4ccZXLzL00U-z0lw0urJqnwWy8Xjdpt2oabe17kn0IHkuBQbkE2AIPV7u1purGd3ZGt-kL8FrrI5aaKB_k7nzeOQZuSV92P1KAx5PTtaISYtTIAB3WRIHig0DLXM4_fChKMTsgs4559kwuDh3bvq-e_HDggFwv7ldBwskSUZo49i9oyekfUfpAqPhvGa9IuhcAnEFRI--TDxxpSBDGdsREIeOR-gMXyZ51DA-bQ",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/api/v1/users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"v1",
+						"users"
+					],
+					"query": [
+						{
+							"key": "client_id",
+							"value": "sso-app",
+							"disabled": true
+						},
+						{
+							"key": "response_type",
+							"value": "code",
+							"disabled": true
+						},
+						{
+							"key": "scope",
+							"value": "openid profile",
+							"disabled": true
+						},
+						{
+							"key": "redirect_uri",
+							"value": "https://google.com",
+							"disabled": true
+						},
+						{
+							"key": "state",
+							"value": "sdfsadfsdf",
+							"disabled": true
+						},
+						{
+							"key": "code",
+							"value": "10267119-1ff2-4bd8-9a5f-a94c4e6a5666.d74153d0-1bf9-4646-8de9-35353e5aae0e.c1916d9d-a80a-4cb1-8bc9-0802bd296b4c",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SSO Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"state\": \"sdfsadfsdf\",\r\n    \"authorizationCode\": \"ffbfa576-b5f0-4d73-8927-96d88a366802.3dbe8fb4-3360-4a5f-a859-cca696342cbf.18894bbc-7b12-416a-8d44-1353ce8eb483\",\r\n    \"redirectUri\": \"http://localhost:4200\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/api/v1/auth/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"v1",
+						"auth",
+						"login"
+					],
+					"query": [
+						{
+							"key": "client_id",
+							"value": "sso-app",
+							"disabled": true
+						},
+						{
+							"key": "response_type",
+							"value": "code",
+							"disabled": true
+						},
+						{
+							"key": "scope",
+							"value": "openid profile",
+							"disabled": true
+						},
+						{
+							"key": "redirect_uri",
+							"value": "https://google.com",
+							"disabled": true
+						},
+						{
+							"key": "state",
+							"value": "sdfsadfsdf",
+							"disabled": true
+						},
+						{
+							"key": "code",
+							"value": "10267119-1ff2-4bd8-9a5f-a94c4e6a5666.d74153d0-1bf9-4646-8de9-35353e5aae0e.c1916d9d-a80a-4cb1-8bc9-0802bd296b4c",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
