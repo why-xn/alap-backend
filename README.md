@@ -51,3 +51,6 @@ docker run -d --name mongodb \
     "msg": "TEXT_MESSAGE"
 }
 ```
+
+### Kubernetes Deployment ###
+All Kubernetes deployment descriptors are available in the `k8` folder
