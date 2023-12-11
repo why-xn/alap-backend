@@ -1,0 +1,220 @@
+definitions:
+  api.ResponseDTO:
+    properties:
+      data: {}
+      msg:
+        type: string
+      status:
+        type: string
+    type: object
+  enum.RfidRefType:
+    enum:
+    - TO
+    - PO
+    - SHIP
+    type: string
+    x-enum-varnames:
+    - RfidRefTypeTO
+    - RfidRefTypePO
+    - RfidRefTypeShip
+  enum.RfidStatus:
+    enum:
+    - DRAFT
+    - EXFACTORY
+    - DCRECEIVED
+    - DCDISPATCHED
+    - STORERECEIVED
+    - DCCOUNTED
+    - DISMISSED
+    type: string
+    x-enum-varnames:
+    - RfidStatusDraft
+    - RfidStatusExFactory
+    - RfidStatusDcReceived
+    - RfidStatusDcDispatched
+    - RfidStatusStoreReceived
+    - RfidStatusDcCounted
+    - RfidStatusDismissed
+  v1.RecycleRfidInputParams:
+    properties:
+      epc:
+        type: string
+    type: object
+  v1.RfidGenerateInput:
+    properties:
+      quantity:
+        type: integer
+      sku:
+        type: string
+    type: object
+  v1.SkuEpcDTO:
+    properties:
+      epc:
+        type: string
+      sku:
+        type: string
+    type: object
+  v1.UpdateRfidInputParams:
+    properties:
+      epc:
+        type: string
+      refId:
+        type: string
+      refType:
+        $ref: '#/definitions/enum.RfidRefType'
+      status:
+        $ref: '#/definitions/enum.RfidStatus'
+    type: object
+  v1.ValidateRfidInputParams:
+    properties:
+      epcList:
+        items:
+          $ref: '#/definitions/v1.SkuEpcDTO'
+        type: array
+    type: object
+info:
+  contact: {}
+paths:
+  /api/v1/rfid:
+    put:
+      consumes:
+      - application/json
+      description: Update
+      parameters:
+      - description: input
+        in: body
+        name: request
+        required: true
+        schema:
+          $ref: '#/definitions/v1.UpdateRfidInputParams'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/api.ResponseDTO'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/api.ResponseDTO'
+      summary: Update
+      tags:
+      - rfid
+  /api/v1/rfid/:epc:
+    get:
+      description: Get One By EPC
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/api.ResponseDTO'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/api.ResponseDTO'
+      summary: Get One By EPC
+      tags:
+      - rfid
+  /api/v1/rfid/generate:
+    post:
+      consumes:
+      - application/json
+      description: Generate
+      parameters:
+      - description: input
+        in: body
+        name: request
+        required: true
+        schema:
+          items:
+            $ref: '#/definitions/v1.RfidGenerateInput'
+          type: array
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/api.ResponseDTO'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/api.ResponseDTO'
+      summary: Generate
+      tags:
+      - rfid
+  /api/v1/rfid/recycle:
+    post:
+      consumes:
+      - application/json
+      description: Recycle
+      parameters:
+      - description: input
+        in: body
+        name: request
+        required: true
+        schema:
+          $ref: '#/definitions/v1.RecycleRfidInputParams'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/api.ResponseDTO'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/api.ResponseDTO'
+      summary: Recycle
+      tags:
+      - rfid
+  /api/v1/rfid/validate:
+    post:
+      consumes:
+      - application/json
+      description: Validate
+      parameters:
+      - description: input
+        in: body
+        name: request
+        required: true
+        schema:
+          $ref: '#/definitions/v1.ValidateRfidInputParams'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/api.ResponseDTO'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/api.ResponseDTO'
+      summary: Validate
+      tags:
+      - rfid
+  /health:
+    get:
+      consumes:
+      - application/json
+      description: Check Health
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/api.ResponseDTO'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/api.ResponseDTO'
+      summary: Check Health
+      tags:
+      - health
+swagger: "2.0"

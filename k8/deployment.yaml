@@ -1,0 +1,40 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: alap-backend
+  namespace: cloudproject
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: alap-backend
+  template:
+    metadata:
+      labels:
+        app: alap-backend
+    spec:
+      containers:
+        - name: app
+          image: whyxn/alap-backend:build-0001
+          env:
+           - name: GIN_MODE
+             value: release
+           - name: RUN_MODE
+             value: K8
+           - name: SERVER_PORT
+             value: "8080"
+          envFrom:
+            - secretRef:
+                name: alap-backend
+          ports:
+            - containerPort: 8080
+          readinessProbe:
+            tcpSocket:
+              port: 8080
+            initialDelaySeconds: 10
+            periodSeconds: 10
+          livenessProbe:
+            tcpSocket:
+              port: 8080
+            initialDelaySeconds: 15
+            periodSeconds: 20

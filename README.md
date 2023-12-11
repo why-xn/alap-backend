@@ -1,0 +1,1 @@
+docker run -d --name keycloak -e KEYCLOAK_DATABASE_VENDOR=dev-file -e KEYCLOAK_ADMIN_USER=admin -e KEYCLOAK_ADMIN_PASSWORD=admin -p 8080:8080 bitnami/keycloak:22.0.5

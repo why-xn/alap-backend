@@ -1,0 +1,20 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  labels:
+    app: alap-backend
+  name: alap-backend
+  namespace: cloudproject
+spec:
+  ingressClassName: nginx
+  rules:
+    - host: alap.34.170.77.158.nip.io
+      http:
+        paths:
+          - backend:
+              service:
+                name: alap-backend
+                port:
+                  number: 8080
+            path: /
+            pathType: ImplementationSpecific
